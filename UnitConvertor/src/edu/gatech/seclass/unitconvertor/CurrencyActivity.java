@@ -1,6 +1,5 @@
 package edu.gatech.seclass.unitconvertor;
 
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +11,6 @@ public class CurrencyActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_currency);
-		//Convert Icon into ActionBar. Allows user to return to Main menu from icon
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
@@ -29,15 +27,15 @@ public class CurrencyActivity extends ActionBarActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch (id) {
+
+		// Respond to the action bar's Up/Home button as per the guidelines for Android 4
+		case android.R.id.home:
+			finish();
+			break;
+		case R.id.action_settings:
+			break;
 		}
-	    switch (item.getItemId()) {
-	    // Respond to the action bar's Up/Home button
-	    case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        return true;
-	    }
 		return super.onOptionsItemSelected(item);
 	}
 }

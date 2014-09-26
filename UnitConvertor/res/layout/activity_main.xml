@@ -62,8 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnDistance"
         android:layout_centerHorizontal="true"
-        android:text="Convert Currency"
-         android:onClick="goToActivity" />
+        android:text="Convert Currency" />
 
     <Button
         android:id="@+id/btnArea"
@@ -72,8 +71,8 @@
         android:layout_alignLeft="@+id/btnDistance"
         android:layout_below="@+id/radioGroup1"
         android:layout_marginTop="61dp"
-        android:onClick="goToActivity"
-        android:text="Convert Area" />
+        android:text="Convert Area" 
+        android:onClick="goToActivity" />
 
     <Button
         android:id="@+id/btnDistance"
@@ -81,7 +80,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btnCurrency"
         android:layout_below="@+id/btnArea"
-        android:text="Convert Distance" 
-         android:onClick="goToActivity"/>
+        android:text="Convert Distance" />
 
 </RelativeLayout>

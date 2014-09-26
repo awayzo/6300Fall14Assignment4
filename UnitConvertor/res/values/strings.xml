@@ -11,5 +11,6 @@
     <string name="title_activity_currency">CurrencyActivity</string>
     <string name="title_activity_area">AreaActivity</string>
     <string name="title_btn_Calc">Calculate</string>
+    <string name="title_activity_dis">DisActivity</string>
 
 </resources>

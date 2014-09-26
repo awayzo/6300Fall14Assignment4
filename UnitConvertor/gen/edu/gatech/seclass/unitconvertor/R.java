@@ -1202,14 +1202,14 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_area=0x7f030018;
         public static final int activity_currency=0x7f030019;
-        public static final int activity_distance=0x7f03001a;
+        public static final int activity_dis=0x7f03001a;
         public static final int activity_main=0x7f03001b;
         public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
     public static final class menu {
         public static final int area=0x7f0c0000;
         public static final int currency=0x7f0c0001;
-        public static final int distance=0x7f0c0002;
+        public static final int dis=0x7f0c0002;
         public static final int main=0x7f0c0003;
     }
     public static final class string {
@@ -1261,6 +1261,7 @@ containing a value of this type.
         public static final int miles=0x7f0a000f;
         public static final int title_activity_area=0x7f0a0015;
         public static final int title_activity_currency=0x7f0a0014;
+        public static final int title_activity_dis=0x7f0a0017;
         public static final int title_activity_distance=0x7f0a0012;
         public static final int title_btn_Calc=0x7f0a0016;
     }
