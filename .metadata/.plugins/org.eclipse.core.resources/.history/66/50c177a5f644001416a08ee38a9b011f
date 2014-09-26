@@ -1,0 +1,16 @@
+package edu.gatech.seclass.unitconvertor;
+
+
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+
+public interface IMainActivity {
+	public boolean onCreateOptionsMenu(Menu menu);
+	
+    public boolean onOptionsItemSelected(MenuItem item);
+	public String milesToKm(double miles);
+	public String kmToMiles(double km);
+	public void handleClick(View view);
+}

@@ -1,0 +1,111 @@
+package edu.gatech.seclass.unitconvertor;
+
+import edu.gatech.seclass.unitconvertor.R;
+import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
+import android.widget.RadioButton;
+
+public class MainActivity extends ActionBarActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+	 
+        return super.onOptionsItemSelected(item);
+    }
+	public String milesToKm(double miles){
+		double km = miles* 1.608;
+		if(miles != 0){
+		
+		return String.valueOf(km);
+		
+	}else{
+		miles = 0;
+		return String.valueOf(km);
+	}	
+    		
+    	}
+	public String kmToMiles(double km){
+		double miles = km / 1.608;
+		if(km != 0){
+			return String.valueOf(miles);
+			
+		}else{
+			km = 0;
+			return String.valueOf(miles);
+		}
+		
+    		
+    	}
+	public void handleClick(View view){
+		Window w = getWindow();
+		
+    	boolean checked =((RadioButton) view).isChecked();
+    	EditText txt =(EditText) findViewById(R.id.txt1);
+    	txt.addTextChangedListener(new TextWatcher() {
+
+            @Override 
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+              // This method is called to notify you that, within s, the count characters 
+              // beginning at start are about to be replaced by new text with length after.  
+            }
+
+            @Override 
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+              // This method is called to notify you that, within s, the count characters 
+              // beginning at start have just replaced old text that had length before.
+            }
+
+            @Override 
+            public void afterTextChanged(Editable s) {
+              // This method is called to notify you that, somewhere within s, the text has 
+              // been changed.
+            }
+          });
+    	//EditText lblTitle =(EditText) findViewById(R.id.lblTitle);
+    	double distance =Double.parseDouble(txt.getText().toString());
+    	
+    	switch(view.getId()){
+    	
+    
+    	case R.id.radio0:
+    		if(checked)
+    			w.setTitle("Converter: Kilometer to Miles");
+    			txt.setText(kmToMiles(distance));
+    	
+    			break;
+    	case R.id.radio1:
+    		if(checked)
+    			w.setTitle("Converter: Miles to Kilometer");
+    			txt.setText(milesToKm(distance));
+            	break;
+    		}
+    }
+    	
+}
