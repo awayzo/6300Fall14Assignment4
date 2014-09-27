@@ -20,7 +20,7 @@ Convert Button(s) : Convert Area, Convert Distance, Convert Currency.
 When you click on any button, it will lead you to the corresponding view.
 
 NAVIGATION:
-The Action Bar, (action bar is located where the app icon is positioned), above and the Back Button below can return you back to the previous view.
+The Options Menu, (located at the top right corner of the app window), above and the Back Button below can return you back to the previous view.
 
 
 ## Development

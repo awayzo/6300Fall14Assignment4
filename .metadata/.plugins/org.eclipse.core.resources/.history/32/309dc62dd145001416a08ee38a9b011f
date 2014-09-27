@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.converter.MainActivity" >
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+  
+    <item
+        android:id="@+id/action_activity_distance"
+        android:orderInCategory="101"
+        android:title="@string/convert_distance">
+    </item>
+    
+        <item
+        android:id="@+id/action_activity_area"
+        android:orderInCategory="102"
+        android:title="@string/convert_area">
+    </item>
+        <item
+        android:id="@+id/action_activity_currency"
+        android:orderInCategory="103"
+        android:title="@string/convert_currency">
+    </item>
+</menu>

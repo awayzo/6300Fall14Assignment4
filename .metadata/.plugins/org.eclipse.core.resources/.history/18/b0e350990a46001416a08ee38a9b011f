@@ -1,0 +1,140 @@
+package edu.gatech.seclass.unitconvertor;
+
+import edu.gatech.seclass.unitconvertor.R;
+import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.*;
+
+
+public class MainActivity extends ActionBarActivity {
+	private static final String LOGTAG = "MainActivity";
+
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		// allow Up navigation with the app icon in the action bar, call
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		Log.d(LOGTAG, "onCreate");
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		Intent intent =null;
+		//Handle action bar selection	
+		//This allows me to replace three event handlers for one, reducing the code.
+		switch (item.getItemId()) {
+		case R.id.action_convert_area:
+			 intent = new Intent(MainActivity.this, AreaActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.action_convert_distance:
+			intent = new Intent(MainActivity.this, DisActivity.class);
+			startActivity(intent);
+		break;
+		case R.id.action_convert_currency:
+			 intent = new Intent(MainActivity.this, CurrencyActivity.class);
+			startActivity(intent);
+		break;
+		case R.id.action_settings:
+			Toast.makeText(this,  item.getTitle() + ": is not currently active", Toast.LENGTH_LONG).show();
+			
+		break;
+
+		default:
+			break;
+		}
+		
+		
+	
+		if (id == R.id.action_settings) {
+			return true;
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
+	@Override
+	protected void onResume(){
+		
+		super.onResume();
+		Log.d(LOGTAG, "onResume");
+		
+	}
+	@Override
+	protected void onStart(){
+		
+		super.onStart();
+		Log.d(LOGTAG, "onStart");
+		
+	}
+	public String milesToKm(double miles) {
+		double km = miles * 1.608;
+		if (miles != 0) {
+
+			return String.valueOf(km);
+
+		} else {
+			miles = 0;
+			return String.valueOf(km);
+		}
+
+	}
+
+	public String kmToMiles(double km) {
+		double miles = km / 1.608;
+		if (km != 0) {
+			return String.valueOf(miles);
+
+		} else {
+			km = 0;
+			return String.valueOf(miles);
+		}
+
+	}
+
+	public void handleClick(View view) {
+		// dynamically changing header with getWindow
+		Window w = getWindow();
+		// See which Radio Button is clicked
+		boolean checked = ((RadioButton) view).isChecked();
+		EditText txt = (EditText) findViewById(R.id.txt1);
+
+		double distance = Double.parseDouble(txt.getText().toString());
+
+		switch (view.getId()) {
+		case R.id.radioMiles:
+			if (checked)
+				w.setTitle("Converter: Kilometer to Miles");
+			txt.setText(kmToMiles(distance));
+			break;
+		case R.id.radioKm:
+			if (checked)
+				w.setTitle("Converter: Miles to Kilometer");
+			txt.setText(milesToKm(distance));
+			break;
+		}
+	}
+
+
+}

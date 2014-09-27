@@ -11,6 +11,14 @@
     <string name="title_activity_currency">CurrencyActivity</string>
     <string name="title_activity_area">AreaActivity</string>
     <string name="title_btn_Calc">Calculate</string>
+    
     <string name="title_activity_dis">DisActivity</string>
+    
+    <string name="convert_currency">Convert Currency</string>
+    <string name="convert_distance">Convert Distance</string>
+    <string name="convert_area">Convert Area</string>
+   
+    <string name="radio0">radio0</string>
+     <string name="radio1">radio1</string>
 
 </resources>

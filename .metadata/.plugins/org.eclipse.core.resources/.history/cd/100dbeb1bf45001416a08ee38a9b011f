@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.unitconvertor.CurrencyActivity" >
+    
+    <LinearLayout android:layout_alignParentTop=“true” android:layout_width=“200px” android:orientation=“vertical” android:layout_height=“280px” android:id=“@+id/linearlayoutId”><TextView android:id=“@+id/TextView01″ android:layout_width=“wrap_content” android:layout_height=“wrap_content” android:text=“Dollars” android:textStyle=“bold”></TextView>
+
+<EditText android:layout_width=“100px” android:layout_height=“50px” android:id=“@+id/dollars” android:lines=“1″></EditText>
+
+<TextView android:id=“@+id/TextView02″ android:layout_width=“wrap_content” android:layout_height=“wrap_content” android:text=“Euros” android:textStyle=“bold”></TextView>
+
+<EditText android:lines=“1″ android:layout_height=“50px” android:layout_width=“100px” android:id=“@+id/euros”></EditText>
+
+<RadioGroup android:id=“@+id/RadioGroup01″ android:layout_width=“wrap_content” android:layout_height=“wrap_content”><RadioButton android:layout_width=“wrap_content” android:layout_height=“wrap_content” android:text=“Dollars to Euros” android:id=“@+id/dtoe”></RadioButton><RadioButton android:layout_width=“wrap_content” android:layout_height=“wrap_content” android:text=“Euros to Dollars” android:id=“@+id/etod”></RadioButton>
+
+</RadioGroup>
+
+</LinearLayout>
+
+<Button android:layout_height=“wrap_content” android:layout_width=“wrap_content” android:layout_below=“@+id/linearlayoutId” android:layout_alignRight=“@+id/linearlayoutId” android:text=“Convert” android:id=“@+id/convert”></Button>
+
+    
+
+</RelativeLayout>

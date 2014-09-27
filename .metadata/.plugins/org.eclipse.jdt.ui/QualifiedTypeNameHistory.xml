@@ -2,8 +2,22 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.example.converter.R.id"/>
 <fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="edu.gatech.converter.R.id"/>
+<fullyQualifiedTypeName name="android.view.Window"/>
+<fullyQualifiedTypeName name="android.text.TextWatcher"/>
+<fullyQualifiedTypeName name="android.text.Editable"/>
+<fullyQualifiedTypeName name="android.support.v4.app.NavUtils"/>
+<fullyQualifiedTypeName name="android.app.TaskStackBuilder"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="edu.gatech.seclass.unitconvertor.R.menu"/>
+<fullyQualifiedTypeName name="android.view.MenuItem.OnMenuItemClickListener"/>
+<fullyQualifiedTypeName name="android.widget.RadioButton"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="edu.gatech.converter.R.id"/>
-<fullyQualifiedTypeName name="android.widget.RadioButton"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="edu.gatech.seclass.unitconvertor.R.id"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 </qualifiedTypeNameHistroy>
