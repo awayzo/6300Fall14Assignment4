@@ -1,0 +1,98 @@
+package edu.gatech.seclass.unitconvertor;
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class ActivityCalculation {
+	private static final double DEFAULT_INPUT_VALUE = 1.0;
+	private static final double MILES_MULTIPLICAND = 1.61;
+	private static final double KM_DENOMINATOR = 1.608;
+	private static NumberFormat nf = new DecimalFormat("##.###");
+
+	private View selectedRadio;
+	//private boolean checked;
+	private static double inputValue;
+
+	
+	
+	public double getInputValue() {
+		return inputValue;
+	}
+
+	public void setInputValue(double inputValue) {
+		this.inputValue = inputValue;
+	}
+	
+	
+
+	public static String milesToKm(double miles) {
+		//Format the output to prevent long strings of numbers
+		 String kmValue =null;
+		// Get inputValue in Kilometers
+		double km = miles * MILES_MULTIPLICAND;
+		kmValue =nf.format(km);
+		if (miles != 0) {
+
+			return String.valueOf(kmValue);
+
+		} else {
+			miles = 0;
+			return String.valueOf(kmValue);
+		}
+
+	}
+
+	public static String kmToMiles(double km) {
+		//Format the output to prevent long strings of numbers
+		 String milesValue =null;
+		// Get inputValue in Miles
+		double miles = km / KM_DENOMINATOR;
+		milesValue = nf.format(miles);
+		if (km != 0) {
+			return String.valueOf(milesValue);
+
+		} else {
+			km = 0;
+			return String.valueOf(milesValue);
+		}
+
+	}
+
+	
+	
+	public static void checkIsEmptyTextEdit(EditText value) {
+		if(isEmpty(value)){
+			 inputValue =DEFAULT_INPUT_VALUE;
+			 value.setText("1.0");
+			 Toast.makeText(DisActivity.this.parent, "No number was entered: Defaulting to 1 Mile to Kilometers",
+						Toast.LENGTH_SHORT).show();
+			
+		}else{
+			
+			inputValue = Double.parseDouble(value.getText().toString());
+		
+			
+		}
+	}	
+	
+	
+	//check if EditText is Empty
+	private static boolean isEmpty(EditText myeditText) {
+        return myeditText.getText().toString().trim().length() == 0;
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//====end
+}

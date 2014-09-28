@@ -11,36 +11,11 @@ import android.view.Window;
 
 public class DisActivity extends ActionBarActivity {
 
-	private View selectedRadio;
-	//private RadioGroup g;
-	private boolean checked;
-	//private int selected;
-	//private RadioButton b;
-	private double distance;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dis);
-
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		// -------------------------------------------------------
-
-		// -------------------------------------------------------
-		//g = (RadioGroup) findViewById(R.id.radioGroupDistance);
-
-		// Returns an integer which represents the selected radio button's ID
-		//selected = g.getCheckedRadioButtonId();
-
-		// Gets a reference to our "selected" radio button
-		//b = (RadioButton) findViewById(selected);
-
-		// Now I can get the text or whatever I want from the "selected" radio
-		// button
-		// b.getText();
-		// Toast.makeText(DisActivity.this, b.getText(),
-		// Toast.LENGTH_SHORT).show();
-
 		// -------------------------------------------------------
 		Button btnConvert = (Button) findViewById(R.id.btnConvert);
 		btnConvert.setOnClickListener(new View.OnClickListener() {
@@ -50,45 +25,42 @@ public class DisActivity extends ActionBarActivity {
 				// Get the text value from the text field
 				EditText value = (EditText) findViewById(R.id.txtValue);
 				EditText answer = (EditText) findViewById(R.id.txtAnswer);
-			
+				// Throw in the RadioButton View need for use
+				
 				// Convert the string to a double
-	//---------------------Check for empty EditText...	
-	//---------------------If Empty or Null: Default EditText to 1.0 and Set distance to 1.0
-				
-				
-				if(isEmpty(value)){
-					 distance =1.0;
-					 value.setText("1.0");
-					 Toast.makeText(DisActivity.this, "No number was entered: Defaulting to 1 Mile to Kilometers",
-								Toast.LENGTH_SHORT).show();
-					
-				}else{
-					
-					distance = Double.parseDouble(value.getText().toString());
-				
-					
-				}
-//---------------------------Check if user pressed Radio button
-//---------------------------If not, it will default to Miles to Kilometers
-				
-				
-				if (selectedRadio == null) {
-					// If it is null, it is Miles to Kilometers selected.
-					// This means the user just pushed the Button without
-					// selecting a radio button
-				
-					answer.setText(ActivityCalculation.milesToKm(distance) + " km" );
+				// -Check for empty value...
+				// -If Empty or Null: Default value to
+				// 1.0 
+				ActivityFactory.setInputValue(value, DisActivity.this);
+				// -Check if user pressed Radio button
+				// -If not, it will default to Miles to Kilometers
 
+				// If it is null, it is Miles to Kilometers selected.
+				// This means the user pressed Convert without
+				// selecting a radio button
+
+				if (ActivityFactory.getSelectedRadio() == null) {
+
+					// get the input from the EditText and use it for the
+					// calculations
+					answer.setText(ActivityFactory.milesToKm(ActivityFactory
+							.getInputValue()) + " km");
 
 				} else {
-					switch (selectedRadio.getId()) {
+					switch (ActivityFactory.getSelectedRadio().getId()) {
 					case R.id.radio0:
-						//If radio button 1 is active: execute Miles to Kilometers
-						answer.setText(ActivityCalculation.milesToKm(distance) + " km");
+						// If radio button 1 is active: execute Miles to
+						// Kilometers
+						answer.setText(ActivityFactory
+								.milesToKm(ActivityFactory.getInputValue())
+								+ " km");
 						break;
 					case R.id.radio1:
-						//If radio button 1 is active: execute Kilometers to Miles
-						answer.setText(ActivityCalculation.kmToMiles(distance) + " miles");
+						// If radio button 1 is active: execute Kilometers to
+						// Miles
+						answer.setText(ActivityFactory
+								.kmToMiles(ActivityFactory.getInputValue())
+								+ " miles");
 						break;
 					default:
 
@@ -98,39 +70,21 @@ public class DisActivity extends ActionBarActivity {
 				}
 
 			}
+
 		});
 
-		// ===============================================================
-
 	}
-	//check if EditText is Empty
-	private boolean isEmpty(EditText myeditText) {
-        return myeditText.getText().toString().trim().length() == 0;
-    }
-	
-	//Set the radio button to current view to check if it is empty
+	//The declaration of this function is controlled by
+	// the onClick in the Activity_dis.xml
 	public void onRadioButtonClicked(View view) {
-		selectedRadio = view;
+		ActivityFactory.setSelectedRadio(view);
 	}
-
+	
+	//---------------------------------------
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.dis, menu);
-		// MenuItem item = menu.add(R.string.convert_currency);
-
-		// Create an event listener to add functionality to
-		// item.setOnMenuItemClickListener(new
-		// MenuItem.OnMenuItemClickListener() {
-		//
-		// @Override
-		// public boolean onMenuItemClick(MenuItem item) {
-		// Intent intent = new Intent(DisActivity.this, CurrencyActivity.class);
-		// startActivity(intent);
-		// return false;
-		// }
-		// });
-		
 		// w will dynamically change the title on the action bar using setTitle
 		Window w = getWindow();
 		w.setTitle("Convert Distance");
@@ -147,7 +101,7 @@ public class DisActivity extends ActionBarActivity {
 		// Handle action bar selection
 		// This allows me to replace three event handlers for one, reducing the
 		// code.
-		//Intents to change activity
+		// Intents to change activity
 		switch (item.getItemId()) {
 		case R.id.action_convert_area:
 			intent = new Intent(DisActivity.this, AreaActivity.class);
@@ -177,6 +131,5 @@ public class DisActivity extends ActionBarActivity {
 
 		return super.onOptionsItemSelected(item);
 	}
-
 
 }
