@@ -1,5 +1,7 @@
 package edu.gatech.seclass.unitconvertor;
 
+import java.text.DecimalFormat;
+
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ public class DisActivity extends ActionBarActivity {
 	boolean checked;
 	int selected;
 	RadioButton b;
+	double distance;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,27 +50,47 @@ public class DisActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				// Get the text value from the text field
-				EditText value = (EditText) findViewById(R.id.txt);
+				EditText value = (EditText) findViewById(R.id.txtValue);
+				EditText answer = (EditText) findViewById(R.id.txtAnswer);
+			
 				// Convert the string to a double
-				double distance = Double.parseDouble(value.getText().toString());
-
+	//---------------------Check for empty EditText...	
+	//---------------------If Empty or Null: Default EditText to 1.0 and Set distance to 1.0
+				
+				
+				if(isEmpty(value)){
+					 distance =1.0;
+					 value.setText("1.0");
+					 Toast.makeText(DisActivity.this, "No number was entered: Defaulting to 1 Mile to Kilometers",
+								Toast.LENGTH_SHORT).show();
+					
+				}else{
+					
+					distance = Double.parseDouble(value.getText().toString());
+				
+					
+				}
+//---------------------------Check if user pressed Radio button
+//---------------------------If not, it will default to Miles to Kilometers
+				
+				
 				if (selectedRadio == null) {
 					// If it is null, it is Miles to Kilometers selected.
 					// This means the user just pushed the Button without
-					// selecting a radio btn
+					// selecting a radio button
+				
+					answer.setText(milesToKm(distance) + " km" );
 
-					Toast.makeText(DisActivity.this, b.getText(),
-							Toast.LENGTH_SHORT).show();
 
 				} else {
 					switch (selectedRadio.getId()) {
 					case R.id.radio0:
-						Toast.makeText(DisActivity.this, "Radio 1 selected",
-								Toast.LENGTH_SHORT).show();
+						//If radio button 1 is active: execute Miles to Kilometers
+						answer.setText(milesToKm(distance)+ " km");
 						break;
 					case R.id.radio1:
-						Toast.makeText(DisActivity.this, "Radio 2 selected",
-								Toast.LENGTH_SHORT).show();
+						//If radio button 1 is active: execute Kilometers to Miles
+						answer.setText(kmToMiles(distance) + " miles");
 						break;
 					default:
 
@@ -82,7 +105,12 @@ public class DisActivity extends ActionBarActivity {
 		// ===============================================================
 
 	}
-
+	//check if EditText is Empty
+	private boolean isEmpty(EditText myeditText) {
+        return myeditText.getText().toString().trim().length() == 0;
+    }
+	
+	//Set the radio button to current view to check if it is empty
 	public void onRadioButtonClicked(View view) {
 		selectedRadio = view;
 	}
@@ -104,6 +132,8 @@ public class DisActivity extends ActionBarActivity {
 		// return false;
 		// }
 		// });
+		
+		// w will dynamically change the title on the action bar using setTitle
 		Window w = getWindow();
 		w.setTitle("Convert Distance");
 		return super.onCreateOptionsMenu(menu);
@@ -176,8 +206,11 @@ public class DisActivity extends ActionBarActivity {
 	}
 
 	public String milesToKm(double miles) {
+		//Format the output to prevent long strings of numbers
+		 DecimalFormat df = new DecimalFormat("#.###");
 		// Get distance in Kilometers
 		double km = miles * 1.61;
+		df.format(km);
 		if (miles != 0) {
 
 			return String.valueOf(km);
@@ -190,8 +223,11 @@ public class DisActivity extends ActionBarActivity {
 	}
 
 	public String kmToMiles(double km) {
+		//Format the output to prevent long strings of numbers
+		 DecimalFormat df = new DecimalFormat("#.###");
 		// Get distance in Miles
 		double miles = km / 1.608;
+		df.format(miles);
 		if (km != 0) {
 			return String.valueOf(miles);
 

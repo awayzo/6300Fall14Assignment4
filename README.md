@@ -9,21 +9,39 @@ Thanks for taking a look at Unit Convertor - a minimalist app that coverts one u
 * Android based smart phone
 
 
-### How to use
+### HOW TO USE:
 
-Tap on the Unit Converter icon. 
-Enter the unit into the text field.
-Select how you want the unit you entered to be displayed by selecting any of the corresponding radio buttons.
+The app displays 3 selection buttons when it loads.
+Convert Area
+Convert Distance
+Convert Currency
 
-Below the Miles/Kilometers radio buttons are three converter buttons.
-Convert Button(s) : Convert Area, Convert Distance, Convert Currency.
-When you click on any button, it will lead you to the corresponding view.
+Each one, if clicked, will lead to the corresponding interface.
+
+After selecting your destination from the start view, the conversion interface will appear.
+
+First click on the type of conversion from the radio button list at the top of the window.
+Next…Enter a value you wish to convert into the “Value to Convert” text field.
+Finally…Click the “Convert” button.
+The results will appear at the bottom of the screen in the field labeled ”Answer” at the bottom of the UI.
+
+WARNING:
+If you do not enter a numerical value into the conversion field, the app will default to a 1:1 conversion using the first Radio button as the units of conversion.
+//====================
 
 NAVIGATION:
-The Options Menu, (located at the top right corner of the app window), above and the Back Button below can return you back to the previous view.
+You can return back to the previous view one of three ways:
+ 
+#1: The Options Menu
+The Options Menu’s location will very depending on your version of android.  In Android 4.4, or KitKat, it appears in the top right corner by default. It looks like three dots. After pressing this menu you will be presented with the “Navigation Menu”. From this menu you can navigate to any conversion interface you like.
 
+#2: Launcher Icon:
+The launcher icon will send the app to the previous view. (same as the the systems back button) 
 
-## Development
+#3: The Back Button
+Your devices ”Back” button will return the app to the previous view.
+
+## DEVELOPMENT:
 
 * Developed using Java
 * Android SDK
@@ -33,5 +51,4 @@ The Options Menu, (located at the top right corner of the app window), above and
 * Eclipse IDE
 
 ## Credits
-
 *Malik Stalbert

@@ -40,15 +40,6 @@
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/lblAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/txtAnswer"
-        android:layout_centerHorizontal="true"
-        android:text="Answer"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/txtAnswer"
         android:layout_width="wrap_content"
@@ -57,7 +48,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="82dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="none" />
 
     <TextView
         android:id="@+id/lblValue"
@@ -88,5 +79,14 @@
         android:layout_alignLeft="@+id/radioGroupDistance"
         android:layout_below="@+id/txtValue"
         android:text="Convert" />
+
+    <TextView
+        android:id="@+id/lblAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtAnswer"
+        android:layout_centerHorizontal="true"
+        android:text="Answer"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
