@@ -77,7 +77,7 @@ public class DisActivity extends ActionBarActivity {
 					// This means the user just pushed the Button without
 					// selecting a radio button
 				
-					answer.setText(ActivityCalculation.milesToKm(distance) + " km" );
+					answer.setText(ActivityCalculation.kmToMiles(distance) + " km" );
 
 
 				} else {

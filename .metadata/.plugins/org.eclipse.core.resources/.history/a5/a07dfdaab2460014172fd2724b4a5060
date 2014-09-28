@@ -1,0 +1,40 @@
+package edu.gatech.seclass.unitconvertor;
+
+import java.text.DecimalFormat;
+
+public class ActivityCalculation {
+
+	public static String milesToKm(double miles) {
+		//Format the output to prevent long strings of numbers
+		 DecimalFormat df = new DecimalFormat("#.###");
+		// Get distance in Kilometers
+		double km = miles * 1.61;
+		df.format(km);
+		if (miles != 0) {
+
+			return String.valueOf(km);
+
+		} else {
+			miles = 0;
+			return String.valueOf(km);
+		}
+
+	}
+
+	public static String kmToMiles(double km) {
+		//Format the output to prevent long strings of numbers
+		 DecimalFormat df = new DecimalFormat("#.###");
+		// Get distance in Miles
+		double miles = km / 1.608;
+		df.format(miles);
+		if (km != 0) {
+			return String.valueOf(miles);
+
+		} else {
+			km = 0;
+			return String.valueOf(miles);
+		}
+
+	}
+//====end
+}

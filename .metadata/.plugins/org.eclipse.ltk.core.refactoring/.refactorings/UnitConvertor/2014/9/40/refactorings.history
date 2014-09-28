@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;edu.gatech.seclass.unitconvertor.ActivityManager&apos; to &apos;ActivityCalculation&apos;&#x0A;- Original project: &apos;UnitConvertor&apos;&#x0A;- Original element: &apos;edu.gatech.seclass.unitconvertor.ActivityManager&apos;&#x0A;- Renamed element: &apos;edu.gatech.seclass.unitconvertor.ActivityCalculation&apos;&#x0A;- Update references to refactored element&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ActivityManager&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;edu.gatech.seclass.unitconvertor{ActivityManager.java[ActivityManager" matchStrategy="1" name="ActivityCalculation" patterns="*" qualified="true" references="true" similarDeclarations="false" stamp="1411868787401" textual="true" version="1.0"/>
+</session>

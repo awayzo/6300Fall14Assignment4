@@ -25,6 +25,8 @@ Next…Enter a value you wish to convert into the “Value to Convert” text fi
 Finally…Click the “Convert” button.
 The results will appear at the bottom of the screen in the field labeled ”Answer” at the bottom of the UI.
 
+
+
 WARNING:
 If you do not enter a numerical value into the conversion field, the app will default to a 1:1 conversion using the first Radio button as the units of conversion.
 //====================
@@ -40,6 +42,14 @@ The launcher icon will send the app to the previous view. (same as the the syste
 
 #3: The Back Button
 Your devices ”Back” button will return the app to the previous view.
+
+
+##How Not To Use:
+
+This app is not meant for exact value calculations. Do not use this app for any conversion that requires any sort of exact solution.
+The application will round to three decimal places for every answer to give you a readable representation of the desired convertor to 3 decimal places
+
+
 
 ## DEVELOPMENT:
 
