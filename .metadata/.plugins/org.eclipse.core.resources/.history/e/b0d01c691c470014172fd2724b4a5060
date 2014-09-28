@@ -14,7 +14,7 @@ public class ActivityFactory {
 	private static final double DEFAULT_INPUT_VALUE = 1.0;
 	private static final double MILES_MULTIPLICAND = 1.61;
 	private static final double KM_DENOMINATOR = 1.608;
-	private static final double RATE = 1.268360;
+	private static final double RATE = 1.271;
 	private static NumberFormat nf = new DecimalFormat("##.###");
 
 	private static View selectedRadio;
@@ -111,32 +111,32 @@ public class ActivityFactory {
 
 				public static String dollarsToEuros(double dollar) {
 					//Format the output to prevent long strings of numbers
-					 String euroValue =null;
+					 String sqMetersValue =null;
 					// Get inputValue in Miles
-					double euro = dollar / RATE;
-					euroValue = nf.format(euro);
-					if (dollar != 0) {
-						return String.valueOf(euroValue);
+					double sqMeters = sqFeet * SQFEET_MULTIPLICAN;
+					sqMetersValue = nf.format(sqMeters);
+					if (sqMeters != 0) {
+						return String.valueOf(sqMetersValue);
 
 					} else {
-						dollar = 0;
-						return String.valueOf(euroValue);
+						sqFeet = 0;
+						return String.valueOf(sqMetersValue);
 					}
 
 				}
 
 				public static String eurosToDollars(double euro) {
 					//Format the output to prevent long strings of numbers
-					 String dollarsValue =null;
+					 String sqFeetValue =null;
 					// Get inputValue in Miles
-					 double dollars = euro * RATE;
-					 dollarsValue = nf.format(dollars);
-					if (euro != 0) {
-						return String.valueOf(dollarsValue);
+					double sqFeet = sqMeter * SQMETER_MULTIPLICAN;
+					sqFeetValue = nf.format(sqFeet);
+					if (sqMeter != 0) {
+						return String.valueOf(sqFeetValue);
 
 					} else {
-						euro = 0;
-						return String.valueOf(dollarsValue);
+						sqMeter = 0;
+						return String.valueOf(sqFeetValue);
 					}
 
 				}

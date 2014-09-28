@@ -114,7 +114,7 @@ public class ActivityFactory {
 					 String euroValue =null;
 					// Get inputValue in Miles
 					double euro = dollar / RATE;
-					euroValue = nf.format(euro);
+					euroValue = nf.format(euroValue);
 					if (dollar != 0) {
 						return String.valueOf(euroValue);
 
@@ -127,16 +127,16 @@ public class ActivityFactory {
 
 				public static String eurosToDollars(double euro) {
 					//Format the output to prevent long strings of numbers
-					 String dollarsValue =null;
+					// String sqFeetValue =null;
 					// Get inputValue in Miles
 					 double dollars = euro * RATE;
-					 dollarsValue = nf.format(dollars);
+					//sqFeetValue = nf.format(sqFeet);
 					if (euro != 0) {
-						return String.valueOf(dollarsValue);
+						return String.valueOf(dollars);
 
 					} else {
 						euro = 0;
-						return String.valueOf(dollarsValue);
+						return String.valueOf(dollars);
 					}
 
 				}

@@ -45,8 +45,8 @@ public class CurrencyActivity extends ActionBarActivity {
 
 							// get the input from the EditText and use it for the
 							// calculations
-							answer.setText(ActivityFactory.dollarsToEuros(ActivityFactory
-									.getInputValue()) + " euro(s)");
+							answer.setText(ActivityFactory.sqFeetToSqMeters(ActivityFactory
+									.getInputValue()) + " sqMeters");
 
 						} else {
 							switch (ActivityFactory.getSelectedRadio().getId()) {
@@ -54,15 +54,15 @@ public class CurrencyActivity extends ActionBarActivity {
 								// If radio button 1 is active: execute Miles to
 								// Kilometers
 								answer.setText(ActivityFactory
-										.dollarsToEuros(ActivityFactory.getInputValue())
-										+ " euro(s)");
+										.sqFeetToSqMeters(ActivityFactory.getInputValue())
+										+ " sqMeters");
 								break;
 							case R.id.radio1:
 								// If radio button 1 is active: execute Kilometers to
 								// Miles
 								answer.setText(ActivityFactory
-										.eurosToDollars(ActivityFactory.getInputValue())
-										+ " dollars");
+										.sqMetersToSqFeet(ActivityFactory.getInputValue())
+										+ " sqFeet");
 								break;
 							default:
 

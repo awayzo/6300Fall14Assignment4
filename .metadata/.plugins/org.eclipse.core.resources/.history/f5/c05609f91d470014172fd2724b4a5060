@@ -72,15 +72,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Dollars to Euros" 
-            android:onClick="onRadioButtonClicked"/>
+            android:text="RadioButton" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Euros to Dollars" 
-            android:onClick="onRadioButtonClicked"/>
+            android:text="RadioButton" />
     </RadioGroup>
 
 </RelativeLayout>

@@ -111,32 +111,32 @@ public class ActivityFactory {
 
 				public static String dollarsToEuros(double dollar) {
 					//Format the output to prevent long strings of numbers
-					 String euroValue =null;
+					// String sqMetersValue =null;
 					// Get inputValue in Miles
-					double euro = dollar / RATE;
-					euroValue = nf.format(euro);
+					double euro = dollar * RATE;
+					//sqMetersValue = nf.format(sqMeters);
 					if (dollar != 0) {
-						return String.valueOf(euroValue);
+						return String.valueOf(euro);
 
 					} else {
 						dollar = 0;
-						return String.valueOf(euroValue);
+						return String.valueOf(euro);
 					}
 
 				}
 
 				public static String eurosToDollars(double euro) {
 					//Format the output to prevent long strings of numbers
-					 String dollarsValue =null;
+					 String sqFeetValue =null;
 					// Get inputValue in Miles
-					 double dollars = euro * RATE;
-					 dollarsValue = nf.format(dollars);
-					if (euro != 0) {
-						return String.valueOf(dollarsValue);
+					double sqFeet = sqMeter * SQMETER_MULTIPLICAN;
+					sqFeetValue = nf.format(sqFeet);
+					if (sqMeter != 0) {
+						return String.valueOf(sqFeetValue);
 
 					} else {
-						euro = 0;
-						return String.valueOf(dollarsValue);
+						sqMeter = 0;
+						return String.valueOf(sqFeetValue);
 					}
 
 				}

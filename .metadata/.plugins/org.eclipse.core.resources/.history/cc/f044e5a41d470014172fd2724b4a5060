@@ -61,8 +61,8 @@ public class CurrencyActivity extends ActionBarActivity {
 								// If radio button 1 is active: execute Kilometers to
 								// Miles
 								answer.setText(ActivityFactory
-										.eurosToDollars(ActivityFactory.getInputValue())
-										+ " dollars");
+										.sqMetersToSqFeet(ActivityFactory.getInputValue())
+										+ " sqFeet");
 								break;
 							default:
 
