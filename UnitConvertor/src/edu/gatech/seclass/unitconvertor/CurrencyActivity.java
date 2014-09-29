@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class CurrencyActivity extends ActionBarActivity {
@@ -27,6 +28,7 @@ public class CurrencyActivity extends ActionBarActivity {
 						// Get the text value from the text field
 						EditText value = (EditText) findViewById(R.id.txtValue);
 						EditText answer = (EditText) findViewById(R.id.txtAnswer);
+						RadioButton radioButton = (RadioButton) findViewById(R.id.radio0);
 						// Throw in the RadioButton View need for use
 						
 						// Convert the string to a double
@@ -41,7 +43,7 @@ public class CurrencyActivity extends ActionBarActivity {
 						// This means the user pressed Convert without
 						// selecting a radio button
 
-						if (ActivityFactory.getSelectedRadio() == null) {
+						if (radioButton.isChecked()) {
 
 							// get the input from the EditText and use it for the
 							// calculations

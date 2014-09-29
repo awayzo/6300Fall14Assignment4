@@ -96,18 +96,22 @@ public class MainActivity extends ActionBarActivity {
 		case R.id.action_convert_area:
 			intent = new Intent(MainActivity.this, AreaActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_convert_distance:
 			intent = new Intent(MainActivity.this, DisActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_convert_currency:
 			intent = new Intent(MainActivity.this, CurrencyActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_settings:
 			Toast.makeText(this, item.getTitle() + ": is not currently active",
 			Toast.LENGTH_LONG).show();
+			finish();
 			break;
 		case android.R.id.home:
 			finish();

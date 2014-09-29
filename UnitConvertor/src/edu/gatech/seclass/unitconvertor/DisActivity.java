@@ -19,12 +19,13 @@ public class DisActivity extends ActionBarActivity {
 		// -------------------------------------------------------
 		Button btnConvert = (Button) findViewById(R.id.btnConvert);
 		btnConvert.setOnClickListener(new View.OnClickListener() {
-
+		
 			@Override
 			public void onClick(View v) {
 				// Get the text value from the text field
 				EditText value = (EditText) findViewById(R.id.txtValue);
 				EditText answer = (EditText) findViewById(R.id.txtAnswer);
+				RadioButton radioButton = (RadioButton) findViewById(R.id.radio0);
 				// Throw in the RadioButton View need for use
 				
 				// Convert the string to a double
@@ -39,7 +40,7 @@ public class DisActivity extends ActionBarActivity {
 				// This means the user pressed Convert without
 				// selecting a radio button
 
-				if (ActivityFactory.getSelectedRadio() == null) {
+				if (radioButton.isChecked()) {
 
 					// get the input from the EditText and use it for the
 					// calculations
@@ -51,11 +52,13 @@ public class DisActivity extends ActionBarActivity {
 					case R.id.radio0:
 						// If radio button 1 is active: execute Miles to
 						// Kilometers
+						
 						answer.setText(ActivityFactory
 								.milesToKm(ActivityFactory.getInputValue())
 								+ " km");
 						break;
 					case R.id.radio1:
+						
 						// If radio button 1 is active: execute Kilometers to
 						// Miles
 						answer.setText(ActivityFactory
@@ -106,14 +109,17 @@ public class DisActivity extends ActionBarActivity {
 		case R.id.action_convert_area:
 			intent = new Intent(DisActivity.this, AreaActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_convert_distance:
 			intent = new Intent(DisActivity.this, DisActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_convert_currency:
 			intent = new Intent(DisActivity.this, CurrencyActivity.class);
 			startActivity(intent);
+			finish();
 			break;
 		case R.id.action_settings:
 			Toast.makeText(this, item.getTitle() + ": is not currently active",
