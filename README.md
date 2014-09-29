@@ -24,22 +24,23 @@ Each one, if clicked, will lead to the corresponding interface.
 
 After selecting your destination from the start view, the conversion interface will appear.
 
-First:
+*First:
 Click on the type of conversion from the radio button list at the top of the window.
 
-Next:
+*Next:
 Enter a value you wish to convert into the “Value to Convert” text field.
 
-Finally:
+*Finally:
 Click the “Convert” button.
 
 The results will appear at the bottom of the screen in the field labeled ”Answer”.
 
-WARNING:
+#WARNING:
 If you do not enter a numerical value into the conversion field, the app will default to a 1:1 conversion using the first Radio button as the units of conversion.
-//====================
 
-NAVIGATION:
+
+
+##NAVIGATION:
 You can return back to the previous view one of three ways:
  
 #1: The Options Menu
