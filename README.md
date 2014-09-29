@@ -40,16 +40,16 @@ If you do not enter a numerical value into the conversion field, the app will de
 
 
 
-##NAVIGATION:
+#NAVIGATION:
 You can return back to the previous view one of three ways:
  
-#1: The Options Menu
+##1: The Options Menu
 The Options Menu’s location will very depending on your version of android.  In Android 4.4, or KitKat, it appears in the top right corner by default; After pressing this menu you will be presented with the “Navigation Menu”. From this menu you can navigate to any conversion interface you like.
 
-#2: Launcher Icon:
+##2: Launcher Icon:
 The launcher icon will send the app to the previous view. (same as the the systems back button) 
 
-#3: The Back Button
+##3: The Back Button
 Your devices ”Back” button will return the app to the previous view.
 
 
