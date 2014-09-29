@@ -7,13 +7,13 @@ Developed 09/28/2014
 
 Thanks for taking a look at Unit Convertor - a minimalist app that coverts one unit type to another.
 
-### Requirements
+# Requirements
 
 * Android based smart phone
 * Android API 19 and above.
 
 
-### HOW TO USE:
+# HOW TO USE:
 
 The app displays 3 selection buttons when it loads.
 Convert Area
@@ -53,19 +53,19 @@ The launcher icon will send the app to the previous view. (same as the the syste
 Your devices ”Back” button will return the app to the previous view.
 
 
-##How Not To Use:
+#How Not To Use:
 
 This app is not meant for exact value calculations. Do not use this app for any conversion that requires any sort of exact solution.
 The application will round to three decimal places for every answer to give you a readable representation of the desired convertor to 3 decimal places
 
 
-## DEVELOPMENT:
+# DEVELOPMENT:
 
 * Developed using Java
 * Android SDK
 
 
-## Tools
+# Tools
 * Eclipse IDE
 
 #INSTALLING
@@ -85,6 +85,6 @@ Rename it to Proj2
 Then, rename it again to Proj1
 Reference:http://stackoverflow.com/questions/14281657/manifest-file-missing
 
-## Credits
+# Credits
 *Malik Stalbert
 masx9000@gmail.com
