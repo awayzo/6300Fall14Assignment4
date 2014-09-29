@@ -34,8 +34,6 @@ Click the “Convert” button.
 
 The results will appear at the bottom of the screen in the field labeled ”Answer”.
 
-
-
 WARNING:
 If you do not enter a numerical value into the conversion field, the app will default to a 1:1 conversion using the first Radio button as the units of conversion.
 //====================
@@ -67,6 +65,15 @@ The application will round to three decimal places for every answer to give you 
 
 ## Tools
 * Eclipse IDE
+
+Eclipse INSTALLING ISSUE:
+A bug issue exist in Eclipse where the project displays”No manifest file!”. This is a known bug. The solution is as follows:
+For instance:
+
+Your project name is Proj1
+Rename it to Proj2
+Then, rename it again to Proj1
+Reference:http://stackoverflow.com/questions/14281657/manifest-file-missing
 
 ## Credits
 *Malik Stalbert
