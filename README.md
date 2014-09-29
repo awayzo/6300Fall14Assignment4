@@ -10,6 +10,7 @@ Thanks for taking a look at Unit Convertor - a minimalist app that coverts one u
 ### Requirements
 
 * Android based smart phone
+* Android API 19 and above.
 
 
 ### HOW TO USE:
@@ -66,8 +67,16 @@ The application will round to three decimal places for every answer to give you 
 ## Tools
 * Eclipse IDE
 
-Eclipse INSTALLING ISSUE:
-A bug issue exist in Eclipse where the project displays”No manifest file!”. This is a known bug. The solution is as follows:
+#INSTALLING
+* Make sure to use all files in the 6300Fall14Assignment4 Folder.
+* Use Eclipse IDE and make a new "Workspace".
+* Set the Virtual Device or actual device with the IDE.
+* Run the application as an Android Application.
+
+
+#Eclipse INSTALLING ISSUE:
+
+A bug issue exist in Eclipse where the project displays ”No manifest file!” after importing. This is a known bug. The solution is as follows:
 For instance:
 
 Your project name is Proj1
