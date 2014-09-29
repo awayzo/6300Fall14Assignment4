@@ -6,8 +6,7 @@
 package edu.gatech.seclass.unitconvertor;
 
 import edu.gatech.seclass.unitconvertor.R;
-
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +17,7 @@ import android.view.Window;
 
 import android.widget.*;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 	private static final String LOGTAG = "MainActivity";
 
 	@Override

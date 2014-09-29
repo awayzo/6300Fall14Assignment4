@@ -1,7 +1,6 @@
 package edu.gatech.seclass.unitconvertor;
 
-
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AreaActivity extends Activity {
+public class AreaActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
