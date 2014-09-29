@@ -7,7 +7,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.content.Context;
+ 
 public class ActivityFactory {
 	private static final double SQMETER_MULTIPLICAN = 10.7639104;
 	private static final double SQFEET_MULTIPLICAN = 0.09290304;

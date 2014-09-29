@@ -1,7 +1,13 @@
+//Unit Convertor 
+//Assignemnt #4
+//Malik Stalbert
+//Completed 9/28/14
+
 package edu.gatech.seclass.unitconvertor;
 
 import edu.gatech.seclass.unitconvertor.R;
-import android.support.v7.app.ActionBarActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +18,7 @@ import android.view.Window;
 
 import android.widget.*;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 	private static final String LOGTAG = "MainActivity";
 
 	@Override
@@ -24,11 +30,11 @@ public class MainActivity extends ActionBarActivity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		Log.d(LOGTAG, "onCreate");
 		
-		//Code the title bare Name in caase I need to use it in code later on.
+		//Code the title bare Name in case I need to use it in code later on.
 		Window w = getWindow();
 		 w.setTitle("Unit Convertor");
 		
-		// ==Button Refs
+		// ==Button reference
 		Button btnDistance = (Button) findViewById(R.id.btnDistance);
 		Button btnCurrency = (Button) findViewById(R.id.btnCurrency);
 		Button btnArea = (Button) findViewById(R.id.btnArea);

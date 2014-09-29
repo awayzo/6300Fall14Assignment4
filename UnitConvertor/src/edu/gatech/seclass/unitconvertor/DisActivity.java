@@ -1,6 +1,6 @@
 package edu.gatech.seclass.unitconvertor;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.*;
 import android.view.Window;
 
-public class DisActivity extends ActionBarActivity {
+public class DisActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
