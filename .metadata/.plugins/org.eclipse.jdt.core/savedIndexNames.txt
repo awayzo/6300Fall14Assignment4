@@ -1,9 +1,5 @@
 INDEX VERSION 1.126+/Users/VO/Documents/GT/Repo/6300Fall14Assignment4/.metadata/.plugins/org.eclipse.jdt.core
 2222423790.index
 1021468845.index
-3593686765.index
-1683225779.index
-1333119233.index
-512744672.index
 1270315800.index
-768041438.index
+4023589429.index
